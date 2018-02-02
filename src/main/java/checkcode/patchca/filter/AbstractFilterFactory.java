@@ -26,6 +26,7 @@ public abstract class AbstractFilterFactory implements FilterFactory {
 
 	protected abstract List<BufferedImageOp> getFilters();
 
+	@Override
 	public BufferedImage applyFilters(BufferedImage source) {
 		BufferedImage dest = source;
 		for (BufferedImageOp filter : getFilters()) {

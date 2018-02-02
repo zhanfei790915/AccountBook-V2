@@ -27,6 +27,7 @@ public class GradientBackgroundFactory implements BackgroundFactory {
 		this.direction = direction;
 	}
 
+	@Override
 	public void fillBackground(BufferedImage dest) {
 
 		float x1, y1, x2, y2;

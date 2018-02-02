@@ -5,6 +5,26 @@
 	id="WebApp_ID" version="2.5">
 	<display-name>SSM configuration</display-name>
 	
+	<!-- 配置log4j配置文件路径 -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <!-- 60s 检测日志配置 文件变化 -->
+    <context-param>
+        <param-name>log4jRefreshInterval</param-name>
+        <param-value>60000</param-value>
+    </context-param>
+	<!-- 配置spring文件所在位置 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring.xml</param-value>
+	</context-param>	
+    <!-- 配置Log4j监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <!-- 配置Spring上下文监听器 -->
 	<listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -12,7 +32,7 @@
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>  
 	
-	<!-- 解决工程编码过滤器 -->
+	<!-- spring解决工程字符编码过滤器 -->
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -26,15 +46,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-	<!-- 配置文件所在位置 -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring.xml,classpath:mybatis-spring.xml</param-value>
-	</context-param>
-	<!-- Spring配置（监听器） -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
 
 	<!-- 避免js和css文件被拦截 -->
 	<servlet-mapping>
@@ -44,8 +55,7 @@
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
 		<url-pattern>*.css</url-pattern>
-	</servlet-mapping>
-	
+	</servlet-mapping>	
 	<!-- 避免图片文件被拦截 -->
 	<servlet-mapping>
 		<servlet-name>default</servlet-name>
@@ -57,7 +67,7 @@
 	</servlet-mapping>
 
 
-	<!-- SpringMVC配置 -->
+	<!-- Spring MVC 核心控制器 DispatcherServlet 配置 -->
 	<servlet>
 		<servlet-name>springDispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -75,16 +85,22 @@
 	<!-- 自动登录过滤 -->
 	<filter>
 		<filter-name>autoLogin</filter-name>
-		<filter-class>com.taoxiuxia.filter.AuthorityFilter</filter-class>
+		<filter-class>com.afei.filter.AuthorityFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>autoLogin</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<!-- 首页设置 -->
 	<welcome-file-list>
 		<welcome-file>
 			userController/showUserLogin.action
 		</welcome-file>
 	</welcome-file-list>
+	
+	<!-- 会话超时设置 -->
+    <session-config>
+    	<session-timeout>60</session-timeout>
+    </session-config>
 </web-app>

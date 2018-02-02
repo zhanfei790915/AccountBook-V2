@@ -42,16 +42,19 @@ public class PatchcaFilterDemo extends Frame implements ActionListener {
 		bottom.add(reloadButton);
 		add(BorderLayout.SOUTH, bottom);
 		addWindowListener(new WindowAdapter() {
+			@Override
 			public void windowClosing(WindowEvent we) {
 				dispose();
 			}
 		});
 	}
 
+	@Override
 	public void update(Graphics g) {
 		paint(g);
 	}
 
+	@Override
 	public void paint(Graphics g) {
 		if (img == null) {
 			createImage();

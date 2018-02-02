@@ -85,7 +85,7 @@ public class CurvesImageOp extends AbstractImageOp {
 		int[] yPoints = new int[cp];
 		width -= 10;
 		for (int i = 0; i < cp; i++) {
-			xPoints[i] = (int) ((int) 5 + (i * width) / (cp - 1));
+			xPoints[i] = (int) (5 + (i * width) / (cp - 1));
 			yPoints[i] = (int) (height * (r.nextDouble() * 0.5 + 0.2));
 		}
 		int subsections = 6;

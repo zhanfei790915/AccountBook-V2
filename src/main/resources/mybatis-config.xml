@@ -5,11 +5,11 @@
 
 <configuration>
 	<mappers>
-		<mapper resource="com/taoxiuxia/mapping/IncomeMapper.xml" />
-		<mapper resource="com/taoxiuxia/mapping/ItemMapper.xml" />
-		<mapper resource="com/taoxiuxia/mapping/ExpenditureMapper.xml" />
-		<mapper resource="com/taoxiuxia/mapping/UserMapper.xml" />
-		<mapper resource="com/taoxiuxia/mapping/BalanceMapper.xml" />
-		<mapper resource="com/taoxiuxia/mapping/PayMethodMapper.xml" />
+		<mapper resource="com/afei/mapping/IncomeMapper.xml" />
+		<mapper resource="com/afei/mapping/ItemMapper.xml" />
+		<mapper resource="com/afei/mapping/ExpenditureMapper.xml" />
+		<mapper resource="com/afei/mapping/UserMapper.xml" />
+		<mapper resource="com/afei/mapping/BalanceMapper.xml" />
+		<mapper resource="com/afei/mapping/PayMethodMapper.xml" />
 	</mappers>
 </configuration> 
