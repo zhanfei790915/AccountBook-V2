@@ -64,7 +64,7 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public User login(String account, String password, boolean hasMD5) throws Exception{
 		if (StringTools.isEmpty(account) || StringTools.isEmpty(password)) {
-			throw new BusinessException("输入参数不合法,account或password不能为空");
+			throw new BusinessException("输入参数不合法,账号或密码不能为空");
 		}
 		User user = null;
 		if (account.contains("@")) { // 邮箱登录

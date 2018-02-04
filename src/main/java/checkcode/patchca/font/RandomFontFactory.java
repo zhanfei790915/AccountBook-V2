@@ -35,8 +35,8 @@ public class RandomFontFactory implements FontFactory {
 		families = new ArrayList<String>();
 		families.add("Verdana");
 		families.add("Tahoma");
-		minSize = 45;
-		maxSize = 45;
+		minSize = 30;
+		maxSize = 30;
 	}
 
 	public RandomFontFactory(List<String> families) {

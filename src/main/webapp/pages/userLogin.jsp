@@ -5,50 +5,98 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ABV2 登录</title>
-<%@ include file="common/common.jsp" %> 
+<title>用户登录</title>
+<link href="../res/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../res/css/public.css" rel="stylesheet">
+<script src="../res/jquery/jquery-2.2.1.min.js"></script>
+<script src="../res/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../res/layer/layer.js"></script>
+<script src="../res/jquery/jquery.qrcode.js"></script>
+<script src="../res/jquery/qrcode.js"></script>
+<script language="javascript" type="text/javascript" src="../res/My97DatePicker/WdatePicker.js"></script>
+<script src="../res/js/user.logout.js"></script>
+<script src="../res/js/common/common.js"></script>
+<script src="../res/js/common/validator.js"></script>
 <link href="../res/css/user.register.css" rel="stylesheet">
-<script src="../res/js/user.login.js"></script>
+
+
+<!-- easyui -->
+<link rel="stylesheet" type="text/css" href="../res/jquery-easyui-1.5.1/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../res/jquery-easyui-1.5.1/themes/icon.css">
+<script type="text/javascript" src="../res/jquery-easyui-1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="../res/jquery-easyui-1.5.1/jquery.easyui.min.js"></script>
+<style>  
+            /*web background*/  
+            .container{  
+                display:table;  
+                height:100%;  
+            }  
+  
+            .row{  
+                display: table-cell;  
+                vertical-align: middle;  
+            }  
+            /* centered columns styles */  
+            .row-centered {  
+                text-align:center;  
+            }  
+            .col-centered {  
+                display:inline-block;  
+                float:none;  
+                text-align:left;  
+                margin-right:-4px;  
+            }  
+</style>
 
 </head>
 <body>
-	<div class="container-fluid padding-top15">
-		<div class="row">
-			<div class="col-xs-12">
-				<ol class="breadcrumb title">
-					<li class="title-li"><span class="title-text">Account Book</span></li>
+<div class="container container-fluid">
+		<div class="row row-centered clearfix">
+			<div class="col-sm-12 col-xs-12 col-centered">
+				<ol class="breadcrumb">
+					<li class="title-li"><span class="title-text">Afei Book</span></li>
 				</ol>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label class="col-sm-3 col-xs-3 control-label">帐号/邮箱：</label>
+						<div class="col-sm-6 col-xs-6">
+							<input class="form-control" id="account" placeholder="帐号/邮箱" maxlength="50">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-3 col-xs-3 control-label">登录密码：</label>
+						<div class="col-sm-6 col-xs-6">
+							<input class="form-control" type="password" id="password" placeholder="密码"  maxlength="50">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-3 col-xs-3 control-label">验证码：</label>
+						<div class="col-sm-3 col-xs-3">
+							<input class="form-control" id="checkCode" placeholder="请输入验证码" maxlength="4">
+						</div>
+						<div class="col-sm-3 col-xs-3">
+							<a onclick="refreshCheckCodeButton()" href="#" id="refreshCheckCode"><img src="checkCode.action"></a>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label class="col-sm-3 col-xs-3 control-label">记住我：</label>
+						<label class="col-sm-1 col-xs-1 checkbox-inline">
+							<input class="form-control" type="checkBox" id="rememberMe">
+						</label>
+					</div>
+				    <div class="col-sm-offset-5 col-sm-6 col-xs-6 checkbox">
+				        <button class="btn btn-primary btn-large" onclick="login()">登录</button>
+				        <a href="showUserRegister.action" class="link1">注册</a>
+				    </div>
+				</form>
 			</div>
 		</div>
-	</div>
-
-	<div class="register">
-		<div class="div1">
-			<label class="label1">帐号/邮箱：</label>
-			<input class="input1" id="account" placeholder="帐号/邮箱" maxlength="12">
-		</div>
 		
-		<div class="div1">
-			<label class="label1">登录密码：</label>
-			<input class="input1" type="password" id="password" placeholder="密码"  maxlength="12">
-		</div>
-		
-		<div class="div1">
-			<label class="label1">验证码：</label>
-			<input class="input2" id="checkCode" placeholder="请输入验证码" maxlength="4">
-			<a onclick="refreshCheckCodeButton()" href="#" id="refreshCheckCode"><img src="checkCode.action"></a>
-		</div>
-		
-		<div class="div1">
-			<label class="label1">记住我：</label>
-			<input type="checkBox" id="rememberMe">
-		</div>
-		
-		<div class="div1">
-			<button class="btn1" onclick="login()">登录</button>
-			<a href="showUserRegister.action" class="link1">注册</a>
-		</div>
-	</div>
-
+</div>
+<div id="qrcode"></div>
 </body>
+<script src="../res/js/user.login.js"></script>
 </html>

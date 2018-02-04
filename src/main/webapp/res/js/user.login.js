@@ -1,6 +1,22 @@
+//jquery二维码
+//简单方式
+//new QRCode(document.getElementById('qrcode'), 'your content');
+//参设置方式
+var qrcode = new QRCode('qrcode', {
+	  text: 'your content',
+	  width: 100,
+	  height: 100,
+	  colorDark: '#000000',
+	  colorLight: '#ffffff',
+	  correctLevel: QRCode.CorrectLevel.H
+	});
+qrcode.clear();
+qrcode.makeCode('http://192.168.0.103:8080/AfeiBook/');
+
+
 // 点击验证码图片换验证码
 function refreshCheckCodeButton(){
-	$(refreshCheckCode).find("img").attr("src", "checkCode.action?" + new Date());
+	$("#refreshCheckCode").find("img").attr("src", "checkCode.action?" + new Date());
 }
 
 // 登录
@@ -25,11 +41,11 @@ function login()
 			if(msg.info=="登录成功"){
 				window.location.href="../frameController/showframe";
 			}else{
-				layer.msg(msg.info);
+				layer.msg(msg.info,{time:2000});
 			}
 		},
 		error: function () {
-			alert("登录失败from前台");
+			layer.msg("登录失败");
 		} 
 	});
 }

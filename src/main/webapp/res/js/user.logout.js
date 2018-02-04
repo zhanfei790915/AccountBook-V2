@@ -1,7 +1,7 @@
 function logout() {
 	$.ajax({
 		type: "POST",
-		url: "/AccountBook-V2/userController/logout.action",
+		url: "/AfeiBook/userController/logout.action",
 		data: {
 		},
 		success: function(msg){
