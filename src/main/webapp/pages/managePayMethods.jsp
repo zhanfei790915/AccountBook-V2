@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ABV2 收支方式管理</title>
+<title>AfeiBook 收支方式管理</title>
 <%@ include file="common/common.jsp" %> 
 <link href="../res/css/managePayMethods.css" rel="stylesheet">
 <script src="../res/js/managePayMethods.js"></script>

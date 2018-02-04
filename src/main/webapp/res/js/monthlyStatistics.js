@@ -19,7 +19,7 @@ function submitBalance(){
 	if(!validateNumOnly(actualBalance, "金额只能是数字")){
 		return false;
 	}
-	$.post("../monthlyStatisticsController/addBalance",{
+	$.post("../monthlyStatisticsController/addBalance.action",{
 		"actualBalance":actualBalance
 	});
 	setTimeout('location.reload()', 1000);
@@ -48,7 +48,7 @@ function changeBalance(month, value1, balanceId){ // 如果参数month为last，
 			if(!validateNumOnly(changed_balance, "金额只能是数字")){
 				return false;
 			}
-       		$.post("../monthlyStatisticsController/changeBalance",{
+       		$.post("../monthlyStatisticsController/changeBalance.action",{
 				"changed_balance":changed_balance,
 				"balanceId":balanceId
 			});

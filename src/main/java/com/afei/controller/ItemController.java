@@ -41,7 +41,7 @@ public class ItemController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showManageItems")
+	@RequestMapping("/showManageItems.action")
 	public String showManageItems(Model model,HttpSession session) {
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		int userId = sessionUser.getUserId();
@@ -59,7 +59,7 @@ public class ItemController {
 	 * @param itemName
 	 * @param remark
 	 */
-	@RequestMapping("/addItem")
+	@RequestMapping("/addItem.action")
 	public void addItem(HttpSession session,String itemName, String remark, String inOrEx) {
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		int userId = sessionUser.getUserId();
@@ -74,7 +74,7 @@ public class ItemController {
 	 * @param remark
 	 * @param inOrEx
 	 */
-	@RequestMapping("/changeItem")
+	@RequestMapping("/changeItem.action")
 	public void changeItem(int itemId, String itemName, String remark, String inOrEx) {
 		itemService.changeItem(itemId, itemName, remark);
 	}
@@ -83,7 +83,7 @@ public class ItemController {
 	 * 删除item
 	 * @param itemId
 	 */
-	@RequestMapping("/deleItem")
+	@RequestMapping("/deleItem.action")
 	public void deleItem(int itemId) {
 		itemService.deleItem(itemId);
 	}
@@ -96,7 +96,7 @@ public class ItemController {
 	 * @param upAndDown
 	 * @return
 	 */
-	@RequestMapping(value = "/upAndDownItem", produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/upAndDownItem.action", produces = "application/json;charset=UTF-8")
 	public @ResponseBody Map<String ,Object> upAndDownItem(HttpSession session, int itemId, String inOrEx, String upAndDown) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);

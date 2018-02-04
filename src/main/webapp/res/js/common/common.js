@@ -34,9 +34,9 @@ Date.prototype.Format = function (fmt) { //author: meizz
 function upAndDown(type, inOrex, id, upAndDown){
 	var target;
 	if(type == "item"){
-		targetUrl = "../itemController/upAndDownItem";
+		targetUrl = "../itemController/upAndDownItem.action";
 	}else if(type == "payMethod"){
-		targetUrl = "../payMethodController/upAndDownPayMethod";   // 收入支出方式的url
+		targetUrl = "../payMethodController/upAndDownPayMethod.action";   // 收入支出方式的url
 	}
 	$.ajax({
 		type: "POST",

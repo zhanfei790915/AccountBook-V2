@@ -45,7 +45,7 @@ function search(page){
 	var sortBy = $("#sortBy option:selected").val(); 
 	$.ajax({
 		type: "POST",
-		url: "searchHistory",
+		url: "searchHistory.action",
 		data: {
 			"type":type,
 			"year":year,
@@ -160,7 +160,7 @@ function changeDetailsItem(itemType, detailsId, date, money, itemId, remark, typ
 			var changedItem = content.find("#changedItem").val();
 			var changedRemark = content.find("#changedRemark").val();
 			var changedtype_of_money = content.find("#changedtype_of_money").val();
-			$.post("../historyController/changeHistory",{
+			$.post("../historyController/changeHistory.action",{
 				"itemType":itemType,  // 原项的类型（收入or支出）
 				"changedType":changedType,  // 现在的类型（收入or支出）
 				"detailsId":detailsId,
@@ -190,7 +190,7 @@ function delDetailsItem(itemType,historyId, curPage){
 	layer.confirm('确认删除？', {
 		  btn: ['删除','返回'] //按钮
 	}, function(){
-		  $.post("../historyController/deleHistory",{
+		  $.post("../historyController/deleHistory.action",{
 				"itemType":itemType,
 				"historyId":historyId,
 			});

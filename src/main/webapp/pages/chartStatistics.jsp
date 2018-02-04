@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2 往月收支</title>
+<title>AfeiBook 往月收支</title>
 <%@ include file="common/common.jsp" %> 
 <link href="../res/css/history.css" rel="stylesheet">
 <script src="../res/js/history.js"></script>
@@ -221,7 +221,7 @@ function searchHistoryGroupByName(){
 	
 	$.ajax({
 		type: "POST",
-		url: "searchChartStatistics",
+		url: "searchChartStatistics.action",
 		data: {
 			"startdate":startdate,
 			"enddate":enddate

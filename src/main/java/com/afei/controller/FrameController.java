@@ -16,17 +16,17 @@ public class FrameController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showframe")
+	@RequestMapping("/showframe.action")
 	public String frame(Model model) {
 		return "pages/frame";
 	}
 	
-	@RequestMapping("/head")
+	@RequestMapping("/head.action")
 	public String head(Model model) {
 		return "pages/head";
 	}
 	
-	@RequestMapping("/menu")
+	@RequestMapping("/menu.action")
 	public String menu(Model model) {
 		return "pages/menu";
 	}

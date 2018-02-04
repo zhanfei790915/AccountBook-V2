@@ -28,7 +28,7 @@ function search(page){
 	var sortBy = $("#sortBy option:selected").val(); 
 	$.ajax({
 		type: "POST",
-		url: "searchHistory",
+		url: "searchHistory.action",
 		data: {
 			"type":type,
 			"year":year,

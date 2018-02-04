@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ABV2 激活</title>
+<title>AfeiBook 激活</title>
 <%@ include file="common/common.jsp" %> 
 <link href="../res/css/user.register.css" rel="stylesheet">
 <script src="../res/js/user.register.js"></script>

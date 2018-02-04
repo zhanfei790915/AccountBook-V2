@@ -22,7 +22,7 @@ function addMoney(){
 			return false;
 		}
 		flag = false;
-		$.post("addExpenditure",{
+		$.post("addExpenditure.action",{
 			"date":date,
 			"item":item,
 			"money":money,
@@ -70,7 +70,7 @@ function changeExpenditure(expenditureId,date,money,itemId,remark,money_type){
     		if(!validateLength(remark, 0, 199, "备注不能超过199个字符")){
     			return false;
     		}
-			$.post("../expenditureController/changeExpenditure",{
+			$.post("../expenditureController/changeExpenditure.action",{
 				"expenditureId":expenditureId,
 				"money":money,
 				"moneyType":changed_money_type,
@@ -91,7 +91,7 @@ function delExpenditure(expenditureId){
 	layer.confirm('确认删除？', {
 		  btn: ['删除','返回'] //按钮
 	}, function(){
-		$.post("../expenditureController/deleExpenditure",{
+		$.post("../expenditureController/deleExpenditure.action",{
 			"expenditureId":expenditureId,
 		});
 		setTimeout('location.reload()', 1000);

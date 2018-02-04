@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2 往月收支</title>
+<title>AfeiBook 往月收支</title>
 <%@ include file="common/common.jsp" %> 
 <link href="../res/css/history.css" rel="stylesheet">
 <script src="../res/js/history.js"></script>
@@ -67,7 +67,7 @@
 				&nbsp;&nbsp;&nbsp;
 				<button onclick="search(1)">筛选</button>
 				
-				<a style="float: right; margin-right: 20px;" href="showChartStatistics">图表展示</a>
+				<a style="float: right; margin-right: 20px;" href="showChartStatistics.action">图表展示</a>
 			</div>
 			<br>
 			<div>

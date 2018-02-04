@@ -13,7 +13,7 @@ import com.afei.util.Constants;
 @RequestMapping("/aboutController")
 public class AboutController {
 
-	@RequestMapping("/showAbout")
+	@RequestMapping("/showAbout.action")
 	public String showBorrows(Model model,HttpSession session) {
 		SessionUser sessionUser= (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		model.addAttribute("sessionUser", sessionUser);

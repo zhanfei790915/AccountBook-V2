@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2 T</title>
+<title>AfeiBook</title>
 <link href="../res/css/frame.css" rel="stylesheet">
 <script src="../res/js/user.logout.js"></script>
 <!-- 可折叠菜单的引入 -->
@@ -18,7 +18,7 @@
 	<div class="row">
 		<ol class="breadcrumb title">
 			<li class="li-style">
-				<span class="title-text">Account Book</span>
+				<span class="title-text">AfeiBook</span>
 				<span class="userInfo">${session_user_key.userName}</span>
 				
 				<a class="logoutLink" href="#" onClick="logout()">注销</a>

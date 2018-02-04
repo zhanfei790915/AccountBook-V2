@@ -72,7 +72,7 @@ public class IncomeController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showIncome")
+	@RequestMapping("/showIncome.action")
 	public String showIncomes(Model model, HttpSession session) {
 		Map<String, Float> map = monthlyStatistics(session);
 		SessionUser sessionUser= (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
@@ -113,7 +113,7 @@ public class IncomeController {
 	 * @param money
 	 * @param remark
 	 */
-	@RequestMapping("/addIncome")
+	@RequestMapping("/addIncome.action")
 	public void addIncomes(String date, int item, float money, String moneyType, String remark, HttpSession session) {
 		int userId = (int)session.getAttribute(Constants.USER_ID);
 		incomeService.addIncome(userId, date, item, money, moneyType, remark);
@@ -127,7 +127,7 @@ public class IncomeController {
 	 * @param itemId
 	 * @param remark
 	 */
-	@RequestMapping("/changeIncome")
+	@RequestMapping("/changeIncome.action")
 	public void changeIncome(int incomeId, float money, String moneyType, int itemId, String remark, String date) {
 		incomeService.changeIncome(incomeId, money, moneyType, itemId, remark, MyDateFormat.dateFormat(date));
 	}
@@ -138,7 +138,7 @@ public class IncomeController {
 	 * @param incomeId
 	 * @param itemId
 	 */
-	@RequestMapping("/deleIncome")
+	@RequestMapping("/deleIncome.action")
 	public void deleIncome(int incomeId, HttpSession session) {
 		incomeService.deleIncome(incomeId);
 	}

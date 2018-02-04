@@ -27,7 +27,7 @@ public class MonthlyStatisticsController {
 	 * 增加Balance
 	 * 
 	 */
-	@RequestMapping("/addBalance")
+	@RequestMapping("/addBalance.action")
 	public void addBalance(float actualBalance, HttpSession session) {
 		int userId = (int)session.getAttribute(Constants.USER_ID);
 		monthlyStatisticsService.addBalance(actualBalance, userId);
@@ -38,7 +38,7 @@ public class MonthlyStatisticsController {
 	 * @param balanceId
 	 * @param actualBalance
 	 */
-	@RequestMapping("/changeBalance")
+	@RequestMapping("/changeBalance.action")
 	public void changeBalance(int balanceId,float changed_balance) {
 		monthlyStatisticsService.changeBalance(balanceId, changed_balance);
 	}

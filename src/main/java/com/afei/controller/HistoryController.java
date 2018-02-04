@@ -43,7 +43,7 @@ public class HistoryController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showhistory")
+	@RequestMapping("/showhistory.action")
 	public String showHistory(Model model,HttpSession session) {
 		SessionUser sessionUser= (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		int userId = sessionUser.getUserId();
@@ -77,7 +77,7 @@ public class HistoryController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showChartStatistics")
+	@RequestMapping("/showChartStatistics.action")
 	public String showChartStatistics(Model model,HttpSession session) {
 		String startdate = DateTimeUtil.firstDayOfThisMonth();
 		String enddate = DateTimeUtil.lastDayOfThisMonth();
@@ -106,7 +106,7 @@ public class HistoryController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/searchChartStatistics", produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/searchChartStatistics.action", produces = "application/json;charset=UTF-8")
 	public @ResponseBody Map<String, Object> searchChartStatistics(Model model,HttpSession session, String startdate, String enddate) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		SessionUser sessionUser= (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
@@ -133,7 +133,7 @@ public class HistoryController {
 	 * @param Curpage 当前页
 	 * @return
 	 */
-	@RequestMapping(value = "/searchHistory", produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/searchHistory.action", produces = "application/json;charset=UTF-8")
 	public @ResponseBody Map<String, Object> searchHistory(HttpSession session, Model model, String type, int year, int month, String keyword, String sortBy, int curPage) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		
@@ -195,7 +195,7 @@ public class HistoryController {
 	 * @param changedRemark
 	 * @return
 	 */
-	@RequestMapping("/changeHistory")
+	@RequestMapping("/changeHistory.action")
 	public void changeHistory(String itemType, String changedType, int detailsId, String changedDate,
 			float changedMoney, String changedMoneyType, int changedItem, String changedRemark, HttpSession session) {
 		int userId = (int) session.getAttribute(Constants.USER_ID);
@@ -222,7 +222,7 @@ public class HistoryController {
 	 * @param itemType
 	 * @param itemId
 	 */
-	@RequestMapping("/deleHistory")
+	@RequestMapping("/deleHistory.action")
 	public void deleteHistory(String itemType, int historyId) {
 		if (itemType.equals("in")) { // 删除income
 			incomeService.deleIncome(historyId);

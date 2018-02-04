@@ -71,7 +71,7 @@ public class ExpenditureController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showExpenditure")
+	@RequestMapping("/showExpenditure.action")
 	public String showExpenditures(Model model,HttpSession session) {
 		Map<String, Float> map = monthlyStatistics(session);
 
@@ -112,7 +112,7 @@ public class ExpenditureController {
 	 * @param money
 	 * @param remark
 	 */
-	@RequestMapping("/addExpenditure")
+	@RequestMapping("/addExpenditure.action")
 	public void addExpenditures(String date, int item, float money, String moneyType, String remark, HttpSession session) {
 		int userId = (int)session.getAttribute(Constants.USER_ID);
 		expenditureService.addExpenditure(userId, date, item, money, moneyType, remark);
@@ -126,7 +126,7 @@ public class ExpenditureController {
 	 * @param itemId
 	 * @param remark
 	 */
-	@RequestMapping("/changeExpenditure")
+	@RequestMapping("/changeExpenditure.action")
 	public void changeExpenditures(int expenditureId, float money, String moneyType, int itemId, String remark,String date, HttpSession session) {
 		expenditureService.changeExpenditure(expenditureId, money, moneyType, itemId, remark,MyDateFormat.dateFormat(date));
 	}
@@ -137,7 +137,7 @@ public class ExpenditureController {
 	 * @param ExpenditureId
 	 * @param itemId
 	 */
-	@RequestMapping("/deleExpenditure")
+	@RequestMapping("/deleExpenditure.action")
 	public void deleExpenditure(int expenditureId) {
 		expenditureService.deleExpenditure(expenditureId);
 	}

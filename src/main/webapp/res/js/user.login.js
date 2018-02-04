@@ -18,7 +18,6 @@ qrcode.makeCode('http://192.168.0.103:8080/AfeiBook/');
 function refreshCheckCodeButton(){
 	$("#refreshCheckCode").find("img").attr("src", "checkCode.action?" + new Date());
 }
-
 // 登录
 // 登录不对输入做校验，只注册才校验
 function login() 
@@ -39,13 +38,13 @@ function login()
 		},
 		success: function(msg){
 			if(msg.info=="登录成功"){
-				window.location.href="../frameController/showframe";
+				window.location.href="../frameController/showframe.action";
 			}else{
 				layer.msg(msg.info,{time:2000});
 			}
 		},
 		error: function () {
-			layer.msg("登录失败");
+			layer.msg("登录失败....",{time:2000});
 		} 
 	});
 }

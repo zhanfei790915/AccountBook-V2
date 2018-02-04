@@ -5,14 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2</title>
+<title>AfeiBook</title>
 </head>
 
 <frameset rows="55px,90%" frameborder="no">
-	<frame src="../frameController/head" />
+	<frame src="../frameController/head.action" />
 	<frameset cols="240px,85%" frameborder="no">
-		<frame src="../frameController/menu" />
-		<frame id="main_content" src="../expenditureController/showExpenditure" />
+		<frame src="../frameController/menu.action" />
+		<frame id="main_content" src="../expenditureController/showExpenditure.action" />
 	</frameset>
 </frameset>
 

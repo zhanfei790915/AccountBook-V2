@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2 收入</title>
+<title>AfeiBook</title>
 <%@ include file="common/common.jsp" %> 
 <script src="../res/js/about.js"></script>
 <link href="../res/css/about.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid padding-top15">
+<div class="container container-fluid">
 	<div class="row">
 		<div class="col-xs-12">
 			<ol class="breadcrumb navigation">
@@ -20,24 +20,9 @@
 				</li>
 			</ol>
 		</div>
-		
 		<div class="col-xs-12">
-			<div class="col-xs-12 label1">一毛钱，您买不了吃亏，一毛钱，您也买不了上当</div>
+			<div class="col-xs-12 label1">AfeiBook系统是一个记账系统，能够提供给您一个方便日常生活收支管理的系统！</div>
 			<br><br>
-			<div class="col-xs-6 label1">
-				<img class="money-image" src="../images/wechat0.1.png"/>
-			</div>
-			<div class="col-xs-6 label1">
-				<img class="money-image" src="../images/alipay0.1.png"/>
-			</div>
-		
-			<div class="col-xs-12 label2">您老随意</div>
-			<div class="col-xs-6 label1">
-				<img class="money-image" src="../images/wechat.png"/>
-			</div>
-			<div class="col-xs-6 label1">
-				<img class="money-image" src="../images/alipay.png"/>
-			</div>
 		</div>
 	</div>
 </div>

@@ -22,7 +22,7 @@ function addMoney(){
 			return false;
 		}
 		flag = false;
-		$.post("addIncome",{
+		$.post("addIncome.action",{
 			"date":date,
 			"item":item,
 			"money":money,
@@ -71,7 +71,7 @@ function changeIncome(incomeId,date,money,itemId,remark,money_type){
     		if(!validateLength(remark, 0, 199, "备注不能超过199个字符")){
     			return false;
     		}
-			$.post("../incomeController/changeIncome",{
+			$.post("../incomeController/changeIncome.action",{
 				"incomeId":incomeId,
 				"money":money,
 				"moneyType":changed_money_type,
@@ -93,7 +93,7 @@ function delIncome(incomeId){
 	layer.confirm('确认删除？', {
 		  btn: ['删除','返回'] //按钮
 	}, function(){
-		$.post("../incomeController/deleIncome",{
+		$.post("../incomeController/deleIncome.action",{
 			"incomeId":incomeId,
 		});
 		setTimeout('location.reload()', 1000);

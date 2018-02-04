@@ -17,7 +17,7 @@ function addItem(inOrEx){
     			return false;
     		}
        		
-			$.post("../itemController/addItem",{
+			$.post("../itemController/addItem.action",{
 				"itemName":itemName,
 				"remark":remark,
 				"inOrEx":inOrEx
@@ -48,7 +48,7 @@ function changeItem(itemId, itemName,remark,inOrEx){
    		if(!validateLength(remark, 0, 199, "备注不能超过199个字符")){
 			return false;
 		}
-		$.post("../itemController/changeItem",{
+		$.post("../itemController/changeItem.action",{
 			"itemId":itemId,
 			"itemName":itemName,
 			"remark":remark,
@@ -62,7 +62,7 @@ function delItem(itemId){
 	layer.confirm('确认删除？', {
 		  btn: ['删除','返回'] //按钮
 	}, function(){
-		$.post("../itemController/deleItem",{
+		$.post("../itemController/deleItem.action",{
 			"itemId":itemId,
 		});
 		setTimeout('location.reload()', 1000);

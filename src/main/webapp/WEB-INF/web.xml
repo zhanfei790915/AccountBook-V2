@@ -46,27 +46,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-
-	<!-- 避免js和css文件被拦截 -->
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.js</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.css</url-pattern>
-	</servlet-mapping>	
-	<!-- 避免图片文件被拦截 -->
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.png</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>*.gif</url-pattern>
-	</servlet-mapping>
-
-
 	<!-- Spring MVC 核心控制器 DispatcherServlet 配置 -->
 	<servlet>
 		<servlet-name>springDispatcherServlet</servlet-name>
@@ -79,18 +58,8 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>springDispatcherServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>*.action</url-pattern>
 	</servlet-mapping>
-	
-	<!-- 自动登录过滤 -->
-	<filter>
-		<filter-name>autoLogin</filter-name>
-		<filter-class>com.afei.filter.AuthorityFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>autoLogin</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
 	
 	<!-- 首页设置 -->
 	<welcome-file-list>

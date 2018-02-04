@@ -31,7 +31,7 @@ function changePayMethod(payMethodId, payMethodName, isCountInThisMonthEx, remar
    		if(!validateLength(remark, 0, 199, "备注不能超过199个字符")){
 			return false;
 		}
-		$.post("../payMethodController/changePayMethod",{
+		$.post("../payMethodController/changePayMethod.action",{
 			"payMethodId":payMethodId,
 			"payMethodName":payMethodName,
 			"isCountInThisMonthEx":isCountInThisMonthEx,
@@ -45,7 +45,7 @@ function delPayMethod(payMethodId){
 	layer.confirm('确认删除？', {
 		btn: ['删除','返回'] //按钮
 	}, function(){
-		$.post("../payMethodController/delePayMethod",{
+		$.post("../payMethodController/delePayMethod.action",{
 			"payMethodId":payMethodId,
 		});
 		setTimeout('location.reload()', 1000);
@@ -84,7 +84,7 @@ function addPayMethod(inOrEx){
 			return false;
 		}
 		
-		$.post("../payMethodController/addPayMethod",{
+		$.post("../payMethodController/addPayMethod.action",{
 			"payMethodName":payMethodName,
 			"isCountInThisMonthEx":isCountInThisMonthEx,
 			"remark":remark,

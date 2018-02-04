@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Account Book v2 T</title>
+<title>AfeiBook</title>
 <link href="../res/css/frame.css" rel="stylesheet">
 <script src="../res/js/user.logout.js"></script>
 <!-- 可折叠菜单的引入 -->
@@ -16,15 +16,15 @@
 	<div id="firstpane" class="menu_list" style="overflow-x: hidden;">
 		<p class="menu_head current">收支</p>
 		<div style="display:block" class=menu_body >
-			<a href="#" onclick="reloadMainContent('../incomeController/showIncome')">收入</a>
-			<a href="#" onclick="reloadMainContent('../expenditureController/showExpenditure')">支出</a>
-			<a href="#" onclick="reloadMainContent('../historyController/showhistory')">历史收支</a>
+			<a href="#" onclick="reloadMainContent('../incomeController/showIncome.action')">收入</a>
+			<a href="#" onclick="reloadMainContent('../expenditureController/showExpenditure.action')">支出</a>
+			<a href="#" onclick="reloadMainContent('../historyController/showhistory.action')">历史收支</a>
 		</div>
 		
 		<p class="menu_head">管理</p>
 		<div style="display:none" class=menu_body >
-			<a href="#" onclick="reloadMainContent('../itemController/showManageItems')">项目管理</a>
-			<a href="#" onclick="reloadMainContent('../payMethodController/showManagePayMethods')">收支方式管理</a>
+			<a href="#" onclick="reloadMainContent('../itemController/showManageItems.action')">项目管理</a>
+			<a href="#" onclick="reloadMainContent('../payMethodController/showManagePayMethods.action')">收支方式管理</a>
 		</div>
 		
 		<p class="menu_head">日程</p>
@@ -34,7 +34,7 @@
 		
 		<p class="menu_head">关于</p>
 		<div style="display:none" class=menu_body >
-			<a href="#" onclick="reloadMainContent('../aboutController/showAbout')">关于</a>
+			<a href="#" onclick="reloadMainContent('../aboutController/showAbout.action')">关于</a>
 		</div>
 	</div>
 </body>

@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ABV2 注册</title>
-<%@ include file="common/common.jsp" %> 
+<title>AfeiBook 用户注册</title>
+<link href="../res/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="../res/css/user.register.css" rel="stylesheet">
-<script src="../res/js/user.register.js"></script>
+<link href="../res/css/public.css" rel="stylesheet">
 
 </head>
 <body>
@@ -41,10 +41,15 @@
 		</div>
 		<div class="div1">
 			<button class="btn1" onclick="register()">下一步</button>
-			<a href="showUserLogin.action" class="link1">已有账号，登录</a>
+			<a href="showUserLogin" class="link1">已有账号，登录</a>
 		</div>
 	</div>
-
-
+<script src="../res/jquery/jquery-2.2.1.min.js"></script>
+<script src="../res/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script src="../res/layer/layer.js"></script>
+<script src="../res/My97DatePicker/WdatePicker.js"></script>
+<script src="../res/js/common/common.js"></script>
+<script src="../res/js/common/validator.js"></script>
+<script src="../res/js/user.register.js"></script>
 </body>
 </html>

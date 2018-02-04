@@ -5,47 +5,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>用户登录</title>
-<link href="../res/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../res/css/public.css" rel="stylesheet">
-<script src="../res/jquery/jquery-2.2.1.min.js"></script>
-<script src="../res/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-<script src="../res/layer/layer.js"></script>
-<script src="../res/jquery/jquery.qrcode.js"></script>
-<script src="../res/jquery/qrcode.js"></script>
-<script language="javascript" type="text/javascript" src="../res/My97DatePicker/WdatePicker.js"></script>
-<script src="../res/js/user.logout.js"></script>
-<script src="../res/js/common/common.js"></script>
-<script src="../res/js/common/validator.js"></script>
-<link href="../res/css/user.register.css" rel="stylesheet">
-
-
-<!-- easyui -->
+<title>AfeiBook用户登录</title>
+<link rel="stylesheet" type="text/css" href="../res/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/user.register.css">
 <link rel="stylesheet" type="text/css" href="../res/jquery-easyui-1.5.1/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="../res/jquery-easyui-1.5.1/themes/icon.css">
-<script type="text/javascript" src="../res/jquery-easyui-1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="../res/jquery-easyui-1.5.1/jquery.easyui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../res/css/public.css">
 <style>  
-            /*web background*/  
-            .container{  
-                display:table;  
-                height:100%;  
-            }  
-  
-            .row{  
-                display: table-cell;  
-                vertical-align: middle;  
-            }  
-            /* centered columns styles */  
-            .row-centered {  
-                text-align:center;  
-            }  
-            .col-centered {  
-                display:inline-block;  
-                float:none;  
-                text-align:left;  
-                margin-right:-4px;  
-            }  
+    /*web background*/  
+    .container{  
+        display:table;  
+        height:100%;  
+    }  
+    .row{  
+        display: table-cell;  
+        vertical-align: middle;  
+    }  
+    /* centered columns styles */  
+    .row-centered {  
+        text-align:center;  
+    }  
+    .col-centered {  
+        display:inline-block;  
+        float:none;  
+        text-align:left;  
+        margin-right:-4px;  
+    }  
 </style>
 
 </head>
@@ -98,5 +83,15 @@
 </div>
 <div id="qrcode"></div>
 </body>
-<script src="../res/js/user.login.js"></script>
+<script type="text/javascript" src="../res/jquery/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="../res/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../res/layer/layer.js"></script>
+<script type="text/javascript" src="../res/jquery/qrcode.js"></script>
+<script type="text/javascript" src="../res/My97DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="../res/js/user.logout.js"></script>
+<script type="text/javascript" src="../res/js/common/common.js"></script>
+<script type="text/javascript" src="../res/js/common/validator.js"></script>
+<script type="text/javascript" src="../res/js/user.login.js"></script>
+<!-- easyui -->
+<script type="text/javascript" src="../res/jquery-easyui-1.5.1/jquery.easyui.min.js"></script>
 </html>

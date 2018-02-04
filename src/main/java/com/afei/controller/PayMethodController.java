@@ -41,7 +41,7 @@ public class PayMethodController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showManagePayMethods")
+	@RequestMapping("/showManagePayMethods.action")
 	public String showManagePayMethods(Model model,HttpSession session) {
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		int userId = sessionUser.getUserId();
@@ -61,7 +61,7 @@ public class PayMethodController {
 	 * @param isCountInThisMonthEx
 	 * @param remark
 	 */
-	@RequestMapping("/changePayMethod")
+	@RequestMapping("/changePayMethod.action")
 	public void changeItem(int payMethodId, String payMethodName, int isCountInThisMonthEx, String remark) {
 		payMethodService.changePayMethod(payMethodId, payMethodName, isCountInThisMonthEx, remark);
 	}
@@ -70,7 +70,7 @@ public class PayMethodController {
 	 * 删除PayMethod
 	 * @param payMethodId
 	 */
-	@RequestMapping("/delePayMethod")
+	@RequestMapping("/delePayMethod.action")
 	public void delePayMethod(int payMethodId) {
 		payMethodService.delePayMethod(payMethodId);
 	}
@@ -83,7 +83,7 @@ public class PayMethodController {
 	 * @param remark
 	 * @param inOrEx
 	 */
-	@RequestMapping("/addPayMethod")
+	@RequestMapping("/addPayMethod.action")
 	public void addItem(HttpSession session,String payMethodName, int isCountInThisMonthEx, String remark, String inOrEx) {
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);
 		int userId = sessionUser.getUserId();
@@ -98,7 +98,7 @@ public class PayMethodController {
 	 * @param upAndDown
 	 * @return
 	 */
-	@RequestMapping(value = "/upAndDownPayMethod", produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/upAndDownPayMethod.action", produces = "application/json;charset=UTF-8")
 	public @ResponseBody Map<String ,Object> upAndDownPayMethod(HttpSession session, int payMethodId, String inOrEx, String upAndDown) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		SessionUser sessionUser = (SessionUser) session.getAttribute(Constants.SESSION_USER_KEY);

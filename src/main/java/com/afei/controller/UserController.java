@@ -6,12 +6,10 @@ import java.net.URLEncoder;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.afei.exception.BusinessException;
 import com.afei.model.SessionUser;
 import com.afei.model.User;
@@ -31,7 +28,6 @@ import com.afei.util.DateTimeUtil;
 import com.afei.util.EmailUtil;
 import com.afei.util.PasswordUtil;
 import com.afei.util.StringTools;
-
 import checkcode.patchca.color.SingleColorFactory;
 import checkcode.patchca.filter.predefined.CurvesRippleFilterFactory;
 import checkcode.patchca.service.ConfigurableCaptchaService;
@@ -54,7 +50,7 @@ public class UserController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showUserRegister")
+	@RequestMapping("/showUserRegister.action")
 	public String showUserRegister(Model model) {
 		return "pages/userRegister";
 	}
@@ -64,7 +60,7 @@ public class UserController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showUserActive")
+	@RequestMapping("/showUserActive.action")
 	public String showUserActive(Model model) {
 		return "pages/userActive";
 	}
@@ -74,7 +70,7 @@ public class UserController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping("/showUserLogin")
+	@RequestMapping("/showUserLogin.action")
 	public String showUserLogin(Model model) {
 		return "pages/userLogin";
 	}
@@ -171,8 +167,7 @@ public class UserController {
 				map.put("info", "验证码已过期，请刷新页面重试");
 				logger.info("验证码已过期，请刷新页面重试");
 				return map;
-			}
-			if (!StringTools.isEmpty(sessionCheckCode) && !sessionCheckCode.equalsIgnoreCase(checkCode)) {
+			}else if(!sessionCheckCode.equalsIgnoreCase(checkCode)){
 				map.put("info", "验证码错误");
 				logger.info("验证码错误");
 				return map;
@@ -250,7 +245,7 @@ public class UserController {
 	 * @param session
 	 * @throws IOException
 	 */
-	@RequestMapping(value = "checkCode.action")
+	@RequestMapping(value = "/checkCode.action")
 	public void checkCode(HttpServletRequest request, HttpServletResponse response, HttpSession session)
 			throws IOException {
 		ConfigurableCaptchaService cs = new ConfigurableCaptchaService();
